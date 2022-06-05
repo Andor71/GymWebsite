@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Roboto+Mono:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+}
+form{
+    padding: 1rem 5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+form h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+div{
+    margin: 1rem 0;
+}
+input{
+    /* margin-bottom: 1rem; */
+    box-shadow: rgba(27, 4, 4, 0.24) 0px 3px 8px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 5px solid #000000;
+    padding: .3rem;
+    text-align: center;
+    color: black;
+}
+#SendBtn{
+    width: 50%;
+}
+#RegisterBtn{
+    width: 50%;
+}
+input:focus{
+    outline: none;
+    border-bottom: 6px solid #000000;
+}
+input::placeholder{
+    color: black;
+    text-align: center;
+}
+hr{
+    height: 1px !important;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background: gray;
+    margin: 1rem auto !important;
+    margin-bottom: 20px;
+    border: 0;
+}
