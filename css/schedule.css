@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Roboto+Mono:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto Mono', monospace;
+}
+nav{
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h1{
+    margin-left: 5rem;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    margin: 1rem 0;
+    margin-right: 5rem;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000000;
+}
+.container{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1rem 5rem;
+}
+table, th, td {
+    border:1px solid black;
+    padding: .5rem;
+    margin: 1rem 0;
+    overflow:auto;
+    max-height: 4vh;
+}
+  input, select{
+    /* margin-bottom: 1rem; */
+    box-shadow: rgba(27, 4, 4, 0.24) 0px 3px 8px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 5px solid #000000;
+    padding: .3rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 1rem;
+}
+input:focus{
+    outline: none;
+    border-bottom: 6px solid #000000;
+}
+input::placeholder{
+    color: black;
+    text-align: center;
+}
+hr{
+    height: 1px !important;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background: gray;
+    margin: 1rem auto !important;
+    margin-bottom: 20px;
+    border: 0;
+}
