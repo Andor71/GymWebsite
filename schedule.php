@@ -53,7 +53,7 @@
                <a href="./home.php">Home</a>
             </li>
             <li>
-                <a href="">Profile</a></li>
+                <a href="./profile.php">Profile</a></li>
             </li>
             <li>
                 <a href="./logout.php">Log Out</a></li>

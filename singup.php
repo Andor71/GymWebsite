@@ -18,7 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     $result = mysqli_query($con, $query);
 
     if ($row=mysqli_num_rows($result) > 0) {
-        $user_id = $row["user_id"] + 1;
+        $row = mysqli_fetch_assoc($result);
+        $user_id = $row["id"] + 1;
         } else {
         $user_id = 1;
         }

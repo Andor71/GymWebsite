@@ -60,3 +60,7 @@ hr{
     margin-bottom: 20px;
     border: 0;
 }
+.error p{
+    text-align: center;
+    color: red
+}

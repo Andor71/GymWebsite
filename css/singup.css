@@ -54,3 +54,7 @@ hr{
     margin-bottom: 20px;
     border: 0;
 }
+.error{
+    text-align: center;
+    color: rgb(155, 4, 4);
+}
