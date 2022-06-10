@@ -7,24 +7,44 @@
 
     font-family: 'Roboto Mono', monospace;
 }
-body{
+nav{
+    background-color: azure;
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 75vh;
+    justify-content: space-between;
 }
-form{
-    padding: 1rem 5rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+nav h1{
+    margin-left: 5rem;
 }
-form h1{
-    text-align: center;
-    margin-bottom: 1rem;
+nav ul{
+    display: flex;
+    justify-content: flex-end;
 }
-div{
+nav ul li{
     margin: 1rem 0;
+    margin-right: 5rem;
+    list-style: none;
 }
-input{
+nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000000;
+}
+.container{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1rem 5rem;
+}
+table, th, td {
+    border:1px solid black;
+    padding: .5rem;
+    margin: 1rem 0;
+    overflow:auto;
+    max-height: 4vh;
+}
+  input, select{
     /* margin-bottom: 1rem; */
     box-shadow: rgba(27, 4, 4, 0.24) 0px 3px 8px;
     width: 100%;
@@ -35,12 +55,7 @@ input{
     padding: .3rem;
     text-align: center;
     color: black;
-}
-#SendBtn{
-    width: 50%;
-}
-#RegisterBtn{
-    width: 50%;
+    margin-bottom: 1rem;
 }
 input:focus{
     outline: none;
@@ -59,8 +74,4 @@ hr{
     margin: 1rem auto !important;
     margin-bottom: 20px;
     border: 0;
-}
-.error p{
-    text-align: center;
-    color: red
 }

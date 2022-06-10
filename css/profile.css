@@ -7,11 +7,55 @@
 
     font-family: 'Roboto Mono', monospace;
 }
-body{
+
+nav{
+    background-color: azure;
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 75vh;
+    justify-content: space-between;
+}
+nav h1{
+    margin-left: 5rem;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav ul li{
+    margin: 1rem 0;
+    margin-right: 5rem;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color:black;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    margin: 2rem 5rem;
+    padding: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+img{
+    max-width: 300px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.profile{
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile h1{
+    text-align: center;
+}
+form{
+    padding: 2rem;
+    border: 1px solid black;
 }
 form{
     padding: 1rem 5rem;
@@ -24,7 +68,7 @@ form h1{
 div{
     margin: 1rem 0;
 }
-input{
+input,select{
     /* margin-bottom: 1rem; */
     box-shadow: rgba(27, 4, 4, 0.24) 0px 3px 8px;
     width: 100%;
@@ -35,12 +79,6 @@ input{
     padding: .3rem;
     text-align: center;
     color: black;
-}
-#SendBtn{
-    width: 50%;
-}
-#RegisterBtn{
-    width: 50%;
 }
 input:focus{
     outline: none;
@@ -60,7 +98,14 @@ hr{
     margin-bottom: 20px;
     border: 0;
 }
-.error p{
-    text-align: center;
-    color: red
+
+.hide{
+    display: none;
+}
+.data{
+    padding: 1rem 5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.data h4{
+    margin-top: 1rem;
 }

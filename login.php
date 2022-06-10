@@ -5,15 +5,25 @@ session_start();
 	include("connection.php");
 
 
+    $Error = "";
+
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
+
+        $_Error = array();
+        //Name
+        if(!isset($_POST['name'])){
+            $_POST['name'] = "";
+        }else    if (!preg_match("/[a-z]/",$_POST['name'])) {
+            array_push($_Error,"Only letters and white space allowed in name");
+        }
  
 
 		if(empty($user_name) && empty($password))
 		{
-            echo "Enter Something";
+            ErrorMsg("Fill the inputs");
         }
 
         $query = "select * from users where user_name = '$user_name' limit 1";
@@ -30,21 +40,27 @@ session_start();
                 {
 
                     $_SESSION['user_id'] = $user_data['user_id'];
-                    header("Location: lobby.php");
+                    header("Location: home.php");
                     die;
                 }
             }
             else
             {
-                echo "Wrong password!";
+                $Error=  ErrorMsg("Wrong username or password");
             }
         }
         else
         {
-            echo "wrong username or password!";
+            $Error =ErrorMsg("Wrong username or password");
         }
 	}
 
+    function ErrorMsg($msg){
+        echo " <div class=error>
+                <p>'$msg'
+                </p>
+            </div>";
+    }
 ?>
 
 
@@ -67,6 +83,12 @@ session_start();
     </div>
     <div>
         <input type="password" name="password" require placeholder="Password" maxlength="10">
+    </div>
+    <div>
+        <?php 
+            echo $Error;
+        ?>
+ 
     </div>
     <div>
         <input id="SendBtn" type="submit" name="submit">

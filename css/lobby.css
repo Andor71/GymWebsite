@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Roboto+Mono:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav{
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h1{
+    margin-left: 5rem;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav ul li{
+    margin: 1rem 0;
+    margin-right: 5rem;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color:black;
+}
+
+.container h1{
+    text-align: center;
+    margin: 2rem 0;
+}
+hr{
+    height: 3px !important;
+    width: 140px;
+    text-align: center;
+    position: relative;
+    background: gray;
+    margin: 1rem auto !important;
+    margin-bottom: 1rem;
+    border: 0;
+}
+
+.navBtn{
+
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5rem 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 0 10rem;
+}
+.navBtn a{
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    border-bottom: 5px solid black;
+}
+.navBtn a:hover{
+    border-bottom: 7px solid black;
+}
