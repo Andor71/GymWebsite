@@ -5,6 +5,8 @@ session_start();
 	include("connection.php");
 
 
+    $Error = "";
+
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		$user_name = $_POST['user_name'];
@@ -44,15 +46,21 @@ session_start();
             }
             else
             {
-                ErrorMsg("Wrong username or password");
+                $Error=  ErrorMsg("Wrong username or password");
             }
         }
         else
         {
-            ErrorMsg("Wrong username or password");
+            $Error =ErrorMsg("Wrong username or password");
         }
 	}
 
+    function ErrorMsg($msg){
+        echo " <div class=error>
+                <p>'$msg'
+                </p>
+            </div>";
+    }
 ?>
 
 
@@ -77,16 +85,9 @@ session_start();
         <input type="password" name="password" require placeholder="Password" maxlength="10">
     </div>
     <div>
-        <p>
         <?php 
-            function ErrorMsg($msg){
-                echo " <div class=error>
-                        <p>'$msg'
-                        </p>
-                    </div>";
-            }
+            echo $Error;
         ?>
-        </p>
  
     </div>
     <div>
